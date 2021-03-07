@@ -48,7 +48,6 @@ soupsieve==2.2
 sqlparse==0.4.1
 toml==0.10.2
 tornado==6.1
-traitlets==5.0.5
 tweepy==3.10.0
 twilio==6.52.0
 urllib3==1.26.3
