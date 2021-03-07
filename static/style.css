@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(158, 247, 217);
+    color: indianred;
+}
+#writings{
+    font-family: 'Noto Sans', sans-serif;
+}
+#titles{
+    font-family: 'Pacifico', cursive;
+    color: goldenrod;
+}

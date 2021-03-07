@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Developer News</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href={{ url_for('static', filename='style.css') }}>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Rochester&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color: rgb(158, 247, 217);">
+<h1 class=" display-1 text-center " style="font-family: 'Pacifico', cursive;color: goldenrod;" >The Developer News</h1>
+<blockquote class="blockquote text-center">
+    <p class="mb-0">Welcome To Developer News. Stay Updated, Stay Corrent.</p>
+    <footer class="blockquote-footer"><cite title="Source Title">The Developer News</cite></footer>
+</blockquote>
+<div class="container">
+    <div class="list-group">
+        {% for item in news %}
+        <a href="{{item['link']}}" class="list-group-item list-group-item-action flex-column align-items-start rounded">
+            <div class="d-flex w-100 justify-content-between">
+                <h3 id='writings' style="font-family: 'Noto Sans', sans-serif" > {{item['title']}}</h3>
+                <small class="text-muted">Points : {{item['point']}}</small>
+            </div>
+        </a><br>
+        {% endfor %}
+    </div>
+</div>
+<footer class="bg-light text-center text-lg-start">
+    <!-- Copyright --><br>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-dark" href="https://news.ycombinator.com/">Hacker News</a>
+    </div><br>
+    <!-- Copyright -->
+</footer>
+</body>
+
+</html>
